@@ -72,7 +72,7 @@ public static class DbRequest
             await connection.OpenAsync();
             command.Connection = connection;
             await command.PrepareAsync();
-            
+
             return await command.ExecuteReaderAsync();
         }
         catch (Exception e)
